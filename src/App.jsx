@@ -10,7 +10,7 @@ function App() {
     const base = new Airtable({ apiKey: 'keygxd7oW9vtlXDJu' }).base('apppkuwOSdcRy2yQV');
 
     base('Table 1').select({
-      maxRecords: 10,
+      maxRecords: 100,
       view: "Grid view"
     }).eachPage(function page(records, fetchNextPage) {
       const newPhotos = records.map(record => ({
